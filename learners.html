@@ -101,18 +101,37 @@
 <body>
 
 <!-- Navigation (Sits on top) -->
-<div class="w3-top w3-bar w3-black w3-padding w3-card w3-wide">
-<a href="index.html" class="w3-bar-item w3-button">@consultwma</a>
+<div class="w3-top w3-bar w3-black w3-padding w3-card">
+<a href="index.html" class="w3-bar-item w3-button" style="color: #D3CDC6; font-weight: bold; font-size: 18px;">@consultwma</a>
 
 <!-- Right-sided navbar links. Hide them on small screens -->
-<div class="w3-right w3-hide-small">
+<div class="w3-right w3-wide" style="color: #D3CDC6;">
+<a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
+<a href="about.html" class="w3-bar-item w3-button w3-hide-small">About Me</a>
+<a href="services.html" class="w3-bar-item w3-button w3-hide-small">Business</a>
+<a href="learners.html" class="w3-bar-item w3-button w3-hide-small">Learners</a>
+<a href="pricing.html" class="w3-bar-item w3-button w3-hide-small">Rates</a>
+<a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+</div>
+<div id="demo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
 <a href="index.html" class="w3-bar-item w3-button">Home</a>
 <a href="about.html" class="w3-bar-item w3-button">About Me</a>
-<a href="services.html" class="w3-bar-item w3-button">Services</a>
+<a href="services.html" class="w3-bar-item w3-button">Business</a>
 <a href="learners.html" class="w3-bar-item w3-button">Learners</a>
-<a href="pricing.html" class="w3-bar-item w3-button">Pricing</a>
+<a href="pricing.html" class="w3-bar-item w3-button">Rates</a>
 <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
 </div>
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 </div>
 
 <!-- Start Content -->
@@ -123,26 +142,26 @@
 
     <!-- Services -->
     <div id="services" class="w3-padding-top-64">
-        <h1 class="w3-center">Learn With Bridges</h1>
+        <h1 class="w3-center" style="font-weight: bold;">Learn With Bridges</h1>
         <div class="w3-row">
             <div class="w3-col l6 m6 w3-padding-large">
-                <h4 class="w3-justify w3-text-grey">Join our educational community and start Learning with Bridges - a growing circle of students and families committed to fostering global citizenship and 21st-century skills in all our learners.</h4><br>
+                <h4 class="w3-justify w3-text-grey">Join our community and start Learning with Bridges - a growing circle of students and families committed to fostering student-centered learning, global citizenship and 21st-century skills in all our learners.</h4><br>
 
-                <h4>Microschooling</h4>
+                <h4 style="font-weight: bold;color:#787673;">Microschooling</h4>
                 <ul class="a w3-text-grey">
                     <li>Modern and innovative learning</li>
                     <li>Flexible schooling</li>
                     <li>Unschooling alternatives</li><br>
                 </ul>
 
-                <h4>Distance Learning</h4>
+                <h4 style="font-weight: bold;color:#787673;">Distance Learning</h4>
                 <ul class="a w3-text-grey">
                     <li>Private tutoring</li>
                     <li>Academic coaching</li>
                     <li>Self-paced learning</li><br>
                 </ul>
 
-                <h4>Enrichment and Outreach</h4>
+                <h4 style="font-weight: bold;color:#787673;">Enrichment and Outreach</h4>
                 <ul class="a w3-text-grey">
                     <li>Skill-based workshops</li>
                     <li>Camps and enrichment activities</li>
@@ -157,13 +176,13 @@
             </div>
 
             <div class="w3-col l6 m6 w3-padding-large">
-                <img src="homeschool.jpg" class="w3-round w3-image" alt="Service" style="width:100%">
+                <img src="homeschool.jpg" class="w3-round w3-image" alt="Service" style="width:100%; margin-top: 50px;">
             </div>
         </div>
     </div>
 
     <div id="services" class="w3-padding-top-64">
-        <h2 class="w3-center w3-text-grey">Bridges Outreach For Learning and Service</h2>
+        <h2 class="w3-center" style="color:#D5B7A2;">Bridges Outreach For Learning and Service</h2>
         <div class="w3-row">
             <div class="w3-container w3-text-grey w3-justify">
                 <p class="important-text">Education is a fundamental right for every child, regardless of their background, abilities or personal circumstances. Bridges Outreach for Learning and Service is a non-profit organization that aims to make education accessible to all children in our community through outreach and enrichment initiatives.</p>
@@ -171,8 +190,8 @@
                 <!-- Image Container with Positioned Button -->
                 <div style="position: relative;">
                     <img src="outreach.png" class="w3-round w3-image" alt="Service" style="width:100%;">
-                    <button class="w3-button w3-sand w3-text-grey w3-round-xlarge" 
-                            style="position: absolute; top: 50%; right: 10%; transform: translate(0, -50%);" 
+                    <button class="w3-button w3-round-xlarge"
+                            style="display: block; margin: 0 auto; color: #787673; background-color: #F2D3BD; position: absolute; top: 50%; right: 10%; transform: translate(0, -50%);" 
                             onclick="window.location.href='contact.html'">
                         Enquire To Start Learning
                     </button>

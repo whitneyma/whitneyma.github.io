@@ -41,6 +41,8 @@ body {font-family: Verdana, sans-serif; margin:0}
 /* Slideshow container */
 .slideshow-container {
   position: relative;
+  margin-left: 100px;
+  margin-right: 100px;
   background: #fffff;
 }
 
@@ -48,6 +50,8 @@ body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {
   display: none;
   padding: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
   text-align: center;
 }
 
@@ -83,7 +87,7 @@ body {font-family: Verdana, sans-serif; margin:0}
 .dot-container {
     text-align: center;
     padding: 20px;
-    background: #ddd;
+    background: #fffff;
 }
 
 /* The dots/bullets/indicators */
@@ -104,10 +108,10 @@ body {font-family: Verdana, sans-serif; margin:0}
 }
 
 /* Add an italic font style to all quotes */
-q {font-style: italic;}
+q {font-style: italic; color:#787673;}
 
 /* Add a blue color to the author */
-.author {color: sandybrown;}
+.author {font-weight: bold; color: #D5B7A2; }
   }
 
 </style>
@@ -115,96 +119,104 @@ q {font-style: italic;}
 <body>
 
 <!-- Navigation (Sits on top) -->
-<div class="w3-top w3-bar w3-black w3-padding w3-card w3-wide">
-<a href="index.html" class="w3-bar-item w3-button">@consultwma</a>
+<div class="w3-top w3-bar w3-black w3-padding w3-card">
+<a href="index.html" class="w3-bar-item w3-button" style="color: #D3CDC6; font-weight: bold; font-size: 18px;">@consultwma</a>
 
 <!-- Right-sided navbar links. Hide them on small screens -->
-<div class="w3-right w3-hide-small">
+<div class="w3-right w3-wide" style="color: #D3CDC6;">
+<a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
+<a href="about.html" class="w3-bar-item w3-button w3-hide-small">About Me</a>
+<a href="services.html" class="w3-bar-item w3-button w3-hide-small">Business</a>
+<a href="learners.html" class="w3-bar-item w3-button w3-hide-small">Learners</a>
+<a href="pricing.html" class="w3-bar-item w3-button w3-hide-small">Rates</a>
+<a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+</div>
+<div id="demo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
 <a href="index.html" class="w3-bar-item w3-button">Home</a>
 <a href="about.html" class="w3-bar-item w3-button">About Me</a>
-<a href="services.html" class="w3-bar-item w3-button">Services</a>
+<a href="services.html" class="w3-bar-item w3-button">Business</a>
 <a href="learners.html" class="w3-bar-item w3-button">Learners</a>
-<a href="pricing.html" class="w3-bar-item w3-button">Pricing</a>
+<a href="pricing.html" class="w3-bar-item w3-button">Rates</a>
 <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
 </div>
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 </div>
+
 
 <!-- Start Content -->
 <div id="home" class="w3-content">
 
 <!-- Image in Display Container -->
-<div class="w3-padding-top-48">
+<div class="w3-padding-top-48 w3-content">
 <div class="w3-display-container">
 <img src="headshot.png" alt="Whitney Headshot" style="width:100%">
+<button class="w3-display-bottommiddle w3-button w3-round-xlarge get-to-know-me-btn" 
+    style="color: #F7F7F6; background-color: #787673; margin-bottom: 60px; margin-left: 100px;" 
+    onclick="window.location.href='about.html'">
+    Get To Know Me
+</button>
 
-<div class="w3-display-middle-left w3-hide-small">
-    <div class="logo-container">
+<div class="w3-display-middle-left">
+    <div class="logo-container w3-hide-small">
       <img src="logo.png" alt="Brand logo">
-      <h2 style="margin: 0;">Streamlining</h2>
-      <h2 style="margin: 0;">Business Operations</h2>
-      <h2 style="margin: 0;">and Empowering</h2>
-      <h2 style="margin: 0;">Academic Excellence</h2>
+      <h2 style="margin: 0; color: #787673;">Supporting Entrepreneurs,<br>Building Community,<br>and Empowering<br>Learners</h2>
+</div>
+<br>
+<!-- Blank Panel -->
+<div class="w3-panel">
 </div>
 <br>
 
-<button class="w3-button w3-grey w3-text-white w3-round-xlarge get-to-know-me-btn" onclick="window.location.href='about.html'">Get To Know Me</button>
-    </div>
-
-
 </div>
 </div>
-
-<!-- Pitch -->
-<div id="about">
-
-<div class="w3-container w3-grey w3-padding-large">
-<h5 class="w3-center w3-text-white">"I help businesses enhance their processes and empower</h5>
-<h5 class="w3-center w3-text-white">learners to boost their academic performance."</h5>
 </div>
 
 </div>
 
-<!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
-
-<!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
-
-<!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
 
 <!-- Intro -->
 <div id="about">
+  <div style="text-align: center; color: #EFE9E2; background-color: #B7B2AB; width: 100%; padding: 5px 0;">
+    <p>
+      <i class="fa fa-quote-right w3-xxlarge"></i><br>
+      <i class="w3-serif w3-xlarge" style="display: inline-block; margin-top: 20px; margin-bottom: 20px;">
+        I help businesses to improve their operations and empower<br> 
+        students to achieve their learning goals.
+      </i>
+    </p>
+  </div>
 
-<div class="w3-container w3-padding-64">
-<h1 class="w3-center w3-text-grey">SO YOU'VE GOT A LOT ON</h1>
-<h1 class="w3-center w3-text-grey">YOUR PLATE...</h1>
+<div class="w3-container w3-padding-64" style="color: #787673; background-color: #D5B7A2;">
+<h1 class="w3-center">SO YOU'VE GOT A LOT ON<br>YOUR PLATE...</h1>
 <br>
-<button class="w3-button w3-sand w3-text-grey w3-round-xlarge" style="display: block; margin: 0 auto;" onclick="window.location.href='services.html'">Let me help you with business</button>
+<button class="w3-button w3-round-xlarge" style="display: block; margin: 0 auto; color: #787673; background-color: #F2D3BD;" onclick="window.location.href='services.html'">Let me help you out</button>
     </div>
 </div>
 </div>
 
-<!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
 
-<!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
 
 <!-- Service Images -->
-<div class="w3-row-padding w3-center">
+<div class="w3-row-padding w3-center w3-padding-64">
   <div class="w3-col s3">
     <div>
         <a href="services.html">
     <img src="va.png" class="w3-opacity w3-hover-opacity-off" style="width:40%">
   </a>
       <div class="w3-container">
-        <p><b>VA Services</b></p>
+        <a href="services.html" style="text-decoration: none;">
+        <p style="color: #787673;"><b>Virtual Assitance</b></p>
+      </a>
       </div>
     </div>
   </div>
@@ -215,7 +227,9 @@ q {font-style: italic;}
       <img src="cloud.png" class="w3-opacity w3-hover-opacity-off" style="width:40%">
        </a>
       <div class="w3-container">
-        <p><b>Digital Transformation</b></p>
+        <a href="services.html" style="text-decoration: none;">
+        <p style="color: #787673;"><b>Digital Transformation</b></p>
+      </a>
       </div>
     </div>
   </div>
@@ -226,7 +240,9 @@ q {font-style: italic;}
       <img src="organize.png" class="w3-opacity w3-hover-opacity-off" style="width:40%">
       </a>
       <div class="w3-container">
-        <p><b>Workspace Organization</b></p>
+        <a href="services.html" style="text-decoration: none;">
+        <p style="color: #787673;"><b>Workspace Organization</b></p>
+      </a>
       </div>
     </div>
   </div>
@@ -237,52 +253,38 @@ q {font-style: italic;}
       <img src="bookkeeping.png" class="w3-opacity w3-hover-opacity-off" style="width:40%">
       </a>
       <div class="w3-container">
-        <p><b>Bookkeeping</b></p>
+        <a href="services.html" style="text-decoration: none;">
+        <p style="color: #787673;"><b>Bookkeeping</b></p>
+      </a>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
-
-<!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
-
-<!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
+<div class="w3-row-padding w3-center" style=" background-color: #fffff;"></div>
 
 <!-- Edu Intro -->
-<div id="about">
+<div class="w3-row-padding w3-center w3-padding-64" style=" background-color: #EFE9E2;"></div>
+<div id="about" style=" background-color: #EFE9E2;">
 
-<div class="w3-container w3-padding-64">
-<h1 class="w3-center w3-text-grey">JOIN MY COMMUNITY</h1>
-<h1 class="w3-center w3-text-grey">OF LEARNERS</h1>
-<br>
-<button class="w3-button w3-sand w3-text-grey w3-round-xlarge" style="display: block; margin: 0 auto;" onclick="window.location.href='learners.html'">Start learning with Bridges</button>
+<div class="w3-container" style="color: #787673;">
+<h1 class="w3-center">JOIN A GROWING<br>COMMUNITY OF LEARNERS</h1>
     </div>
 </div>
 </div>
-<!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
 
-<!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
 
 <!-- Edu Images -->
-<div class="w3-row-padding w3-center">
+<div class="w3-row-padding w3-center w3-padding-64" style=" background-color: #EFE9E2;">
   <div class="w3-col s4">
     <div>
         <a href="learners.html">
     <img src="micro.png" class="w3-opacity w3-hover-opacity-off" style="width:40%">
   </a>
       <div class="w3-container">
-        <p><b>Microschooling</b></p>
+        <a href="learners.html"  style="text-decoration: none;">
+        <p style="color: #787673;"><b>Microschooling</b></p></a>
       </div>
     </div>
   </div>
@@ -293,7 +295,8 @@ q {font-style: italic;}
       <img src="distance.png" class="w3-opacity w3-hover-opacity-off" style="width:40%">
        </a>
       <div class="w3-container">
-        <p><b>Distance Learning</b></p>
+        <a href="learners.html"  style="text-decoration: none;">
+        <p style="color: #787673;"><b>Distance Learning</b></p></a>
       </div>
     </div>
   </div>
@@ -304,82 +307,75 @@ q {font-style: italic;}
       <img src="enrich.png" class="w3-opacity w3-hover-opacity-off" style="width:40%">
       </a>
       <div class="w3-container">
-        <p><b>Enrichment & Outreach</b></p>
+        <a href="learners.html"  style="text-decoration: none;">
+        <p style="color: #787673;"s><b>Enrichment & Outreach</b></p></a>
       </div>
     </div>
   </div>
+<div class="w3-row-padding w3-center w3-padding-64" style=" background-color: #EFE9E2;"></div>
+<button class="w3-button w3-round-xlarge" style="background-color: #787673; color: #F7F7F6; display: block; margin: 0 auto;" onclick="window.location.href='learners.html'">Start learning with Bridges</button>
   </div>
 </div>
 
-<!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
 
-<!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
 
-<!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
-
-<!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
-
-<!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
 
 <!-- Testimonials -->
 <div id="about">
 
 <div class="w3-container w3-padding-64">
-<h1 class="w3-center w3-text-grey">SOME KIND WORDS FROM</h1>
-<h1 class="w3-center w3-text-grey"> MY COMMUNITY</h1>
-<br>
+  <h3 class="w3-center" style="color:#787673;"><b>TESTIMONIALS</b></h3>
+  <p class="w3-center" style="color:#787673;">some kind words from my community</p>
+
+  <!-- Flex container for image and slideshow -->
+  <div style="display: flex; align-items: center;">
+
+    <!-- Image on the left -->
+    <img src="reviews.png" style="width: 20%; margin-left: 30px;">
+
+    <!-- Slideshow on the right -->
+    <div class="slideshow-container" style="flex: 1;">
+
+      <div class="mySlides">
+        <q>I was so grateful for the help in opening the bank account for my business as I was new to all of it. You explained everything to me so well that I could understand it all. The banker was especially impressed; I had nothing to fix, resulting in an efficient, same-day process. I would highly recommend you to anyone who may need assistance.</q>
+        <p class="author">- Kezia. W. (Business Owner)</p>
+      </div>
+
+      <div class="mySlides">
+        <q>Whitney has previously worked with my son to prepare him for his SEA exam. During that time, I observed that he was quite attentive to her. She was able to get him to settle down and focus. Whitney has a caring and calm approach. I will happily recommend in any capacity she undertakes.</q>
+        <p class="author">- Lynthia. F. (Parent)</p>
+      </div>
+
+      <div class="mySlides">
+        <q>Entering university for the first time was exciting but daunting. In the absence of an academic advisor, Whitney, with her kind and patient approach, guided me through the course selection process, planning and registration seamlessly. I am forever grateful for her support during that pivotal time.</q>
+        <p class="author">- Kezia. J. (University Student)</p>
+      </div>
+
+      <div class="mySlides">
+        <q>Ms. Lewis is an amazing tutor. I started using her services for my boys to give them extra support with their school subjects and homework. They love the interaction with her and look forward to each lesson with her. 
+        Thanks Ms. Lewis for your professionalism and compassion towards guiding my boys with their education.</q>
+        <p class="author">- Charmaine. J. (Parent)</p>
+      </div>
+
+      <div class="mySlides">
+        <q>I always tell everybody you make my life easier!</q>
+        <p class="author">- Tevin Lewis (Business Owner)</p>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+  </div>
+
+  <!-- Dot container for slide navigation -->
+  <div class="dot-container" style="text-align: center;">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
 
 </div>
-</div>
-</div>
-
-<div class="slideshow-container">
-
-<div class="mySlides">
-  <q>I was so grateful for the help in opening the bank account for my business as I was new to all of it. You explained everything to me so well that I could understand it all. The banker was especially impressed; I had nothing to fix, resulting in an efficient, same-day process. I would highly recommend you to anyone who may need assistance.</q>
-  <p class="author">- Kezia. W. (Business Owner)</p>
-</div>
-
-<div class="mySlides">
-  <q>Whitney has previously worked with my son to prepare him for his SEA exam. During that time, I observed that he was quite attentive to her. She was able to get him to settle down and focus. Whitney has a caring and calm approach. I will happily recommend in any capacity she undertakes.</q>
-  <p class="author">- Lynthia. F. (Parent)</p>
-</div>
-
-<div class="mySlides">
-  <q>Entering university for the first time was exciting but daunting. In the absence of an academic advisor, Whitney, with her kind and patient approach, guided me through the course selection process, planning and registration seamlessly. I am forever grateful for her support during that pivotal time.</q>
-  <p class="author">- Kezia. J. (University Student)</p>
-</div>
-
-<div class="mySlides">
-  <q>Ms. Lewis is an amazing tutor. I started using her services for my boys to give them extra support with their school subjects and homework. They love the interaction with her and look forward to each lesson with her. 
-Thanks Ms. Lewis for your professionalism and compassion towards guiding my boys with their education.</q>
-  <p class="author">- Charmaine. J. (Parent)</p>
-</div>
-
-<div class="mySlides">
-  <q>I always tell everybody you make my life easier!</q>
-  <p class="author">- Tevin lewis (Business Owner)</p>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-
-</div>
-
-<div class="dot-container">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
 
 <script>
@@ -410,6 +406,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+
 
 
 <!-- Contact Me -->

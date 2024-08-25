@@ -49,32 +49,59 @@
 <body>
 
 <!-- Navigation (Sits on top) -->
-<div class="w3-top w3-bar w3-black w3-padding w3-card w3-wide">
-<a href="index.html" class="w3-bar-item w3-button">@consultwma</a>
+<div class="w3-top w3-bar w3-black w3-padding w3-card">
+<a href="index.html" class="w3-bar-item w3-button" style="color: #D3CDC6; font-weight: bold; font-size: 18px;">@consultwma</a>
 
 <!-- Right-sided navbar links. Hide them on small screens -->
-<div class="w3-right w3-hide-small">
+<div class="w3-right w3-wide" style="color: #D3CDC6;">
+<a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
+<a href="about.html" class="w3-bar-item w3-button w3-hide-small">About Me</a>
+<a href="services.html" class="w3-bar-item w3-button w3-hide-small">Business</a>
+<a href="learners.html" class="w3-bar-item w3-button w3-hide-small">Learners</a>
+<a href="pricing.html" class="w3-bar-item w3-button w3-hide-small">Rates</a>
+<a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+</div>
+<div id="demo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
 <a href="index.html" class="w3-bar-item w3-button">Home</a>
 <a href="about.html" class="w3-bar-item w3-button">About Me</a>
-<a href="services.html" class="w3-bar-item w3-button">Services</a>
+<a href="services.html" class="w3-bar-item w3-button">Business</a>
 <a href="learners.html" class="w3-bar-item w3-button">Learners</a>
-<a href="pricing.html" class="w3-bar-item w3-button">Pricing</a>
+<a href="pricing.html" class="w3-bar-item w3-button">Rates</a>
 <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
 </div>
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 </div>
 
 <!-- Blank Panel -->
 <div class="w3-panel w3-white">
 </div>
 
-<!-- Blank Panel -->
-<div class="w3-panel w3-white">
-</div>
+
 
 <!-- Add margin to form container -->
-<div class="form-container">
+<div class="form-container" style="display: flex; align-items: center;">
+
+  <!-- Image on the left -->
+  <img src="intouch.png" style="width: 25%; object-fit: cover; margin-left: 100px;">
+
+  <!-- Form on the right -->
+  <div style="flex: 1;">
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
     <div class="elfsight-app-55721757-3e3b-4b85-a102-3b67cd68ff35" data-elfsight-app-lazy></div>
+  </div>
+
+</div>
+
 
     <!-- Contact Me Section -->
     <div class="w3-row" style="height: 100vh; display: flex; margin: 0; padding: 0;">

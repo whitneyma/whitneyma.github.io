@@ -20,7 +20,7 @@
             text-align: center;
         }
         .intro-section {
-            padding: 30px 20px; /* Reduced padding to minimize the gap */
+            padding: 30px 20px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -28,14 +28,14 @@
         }
         .intro-section div {
             flex: 1;
-            margin: 20px; /* Reduced margin to minimize the gap */
+            margin: 20px;
             padding: 10px;
         }
         .intro-section img {
             display: block;
             margin: 0 auto;
             width: 100%;
-            max-width: 300px;
+            max-width: 400px; /* Increased size of the first image */
             border-radius: 50%;
         }
         .intro-text {
@@ -43,7 +43,7 @@
             color: #333;
         }
         .content-section {
-            padding: 30px 20px; /* Reduced padding to match the intro section */
+            padding: 30px 20px;
             text-align: center;
         }
         .content-section div {
@@ -60,15 +60,19 @@
             text-align: center;
             margin: 0 auto;
         }
+        .center-content a {
+            margin-bottom: 10px;
+            display: block;
+        }
         .quote {
             font-size: 1.5em;
             font-style: italic;
             text-align: center;
             color: #555;
-            margin: 10px 0; /* Reduced margin to bring sections closer */
+            margin: 10px 0;
         }
         .w3-button {
-            margin-top: 10px; /* Reduced margin to align with the flow */
+            margin-top: 10px;
         }
         .footer {
             text-align: center;
@@ -76,24 +80,49 @@
             background-color: #fffff;
             color: ;
         }
+        .spacer {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
 <!-- Navigation (Sits on top) -->
-<div class="w3-top w3-bar w3-black w3-padding w3-card w3-wide">
-<a href="index.html" class="w3-bar-item w3-button">@consultwma</a>
+<div class="w3-top w3-bar w3-black w3-padding w3-card">
+<a href="index.html" class="w3-bar-item w3-button" style="color: #D3CDC6; font-weight: bold; font-size: 18px;">@consultwma</a>
 
 <!-- Right-sided navbar links. Hide them on small screens -->
-<div class="w3-right w3-hide-small">
+<div class="w3-right w3-wide" style="color: #D3CDC6;">
+<a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
+<a href="about.html" class="w3-bar-item w3-button w3-hide-small">About Me</a>
+<a href="services.html" class="w3-bar-item w3-button w3-hide-small">Business</a>
+<a href="learners.html" class="w3-bar-item w3-button w3-hide-small">Learners</a>
+<a href="pricing.html" class="w3-bar-item w3-button w3-hide-small">Rates</a>
+<a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+</div>
+<div id="demo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
 <a href="index.html" class="w3-bar-item w3-button">Home</a>
 <a href="about.html" class="w3-bar-item w3-button">About Me</a>
-<a href="services.html" class="w3-bar-item w3-button">Services</a>
+<a href="services.html" class="w3-bar-item w3-button">Business</a>
 <a href="learners.html" class="w3-bar-item w3-button">Learners</a>
-<a href="pricing.html" class="w3-bar-item w3-button">Pricing</a>
+<a href="pricing.html" class="w3-bar-item w3-button">Rates</a>
 <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
 </div>
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 </div>
+
+<!-- Add a spacer between navigation and content -->
+<div class="spacer"></div>
 
 <!-- Start Content -->
 <div id="home" class="w3-content">
@@ -109,9 +138,9 @@
     <!-- Intro Section -->
     <div class="intro-section">
         <div>
-            <h1>Hi, I’m Whitney!</h1>
+            <h1 style="font-weight: bold;">Hi, I’m Whitney!</h1>
             <p class="intro-text w3-text-grey">I’m a freelance business consultant and registered teacher from Trinidad and Tobago. I have a background in Psychology and Human Resource Management, and my mission is to help businesses enhance their processes and empower learners to achieve their goals.</p>
-            <p class="quote">"12+ years in banking and finance, I am skilled in business operations, systems, and customer relationship management."</p>
+            <p class="quote w3-center" style="color:#D5B7A2;">"12+ years in banking and finance, I am skilled in business operations, systems, and customer relationship management."</p>
             <p class="intro-text w3-text-grey">My personal journey through teaching and tutoring, allowed me to combine my passion for education with my professional skills. I’ve also worked in the non-profit sector, where I further developed my dedication to community support.</p>
         </div>
         <div>
@@ -124,7 +153,7 @@
             <img src="eat.jpg" alt="Photo of Whitney eating">
         </div>
         <div>
-            <p class="quote">"Motherhood, Faith & Mental Health"</p>
+            <p class="quote w3-center" style="color:#D5B7A2;">"Motherhood, Faith & Mental Health"</p>
             <p class="intro-text w3-text-grey">As a mother of one, I understand the need for balance and aim to create efficient solutions to streamline daily tasks. I'm a problem-solver who thrives on innovation, and I am motivated to continually learn and share my knowledge with others. My interest in human behaviour helps me to improve my practices and methods, and I am able to create effective strategies tailored to individual needs.</p>
             <p class="intro-text w3-text-grey">My faith in Christ has brought me here, and I feel led to build a community, and to advocate for lifelong learning. I am also dedicated to supporting mental wellness, and fostering growth in business and education.</p>
         </div>
@@ -137,7 +166,7 @@
                 <i class="fab fa-linkedin"></i> Connect on LinkedIn
             </a>
             <br>
-            <button class="w3-button w3-sand w3-text-grey w3-round-xlarge" onclick="window.location.href='services.html'">Let's Work Together</button>
+            <button class="w3-button w3-white w3-border w3-border-grey w3-round-xlarge" style="color:#787673;" onclick="window.location.href='contact.html'">Let's Work Together</button>
         </div>
     </div>
 
@@ -150,5 +179,7 @@
 
 </body>
 </html>
+
+
 
 

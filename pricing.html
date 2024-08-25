@@ -44,18 +44,37 @@
 <body>
 
 <!-- Navigation (Sits on top) -->
-<div class="w3-top w3-bar w3-black w3-padding w3-card w3-wide">
-<a href="index.html" class="w3-bar-item w3-button">@consultwma</a>
+<div class="w3-top w3-bar w3-black w3-padding w3-card">
+<a href="index.html" class="w3-bar-item w3-button" style="color: #D3CDC6; font-weight: bold; font-size: 18px;">@consultwma</a>
 
 <!-- Right-sided navbar links. Hide them on small screens -->
-<div class="w3-right w3-hide-small">
+<div class="w3-right w3-wide" style="color: #D3CDC6;">
+<a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
+<a href="about.html" class="w3-bar-item w3-button w3-hide-small">About Me</a>
+<a href="services.html" class="w3-bar-item w3-button w3-hide-small">Business</a>
+<a href="learners.html" class="w3-bar-item w3-button w3-hide-small">Learners</a>
+<a href="pricing.html" class="w3-bar-item w3-button w3-hide-small">Rates</a>
+<a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+</div>
+<div id="demo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
 <a href="index.html" class="w3-bar-item w3-button">Home</a>
 <a href="about.html" class="w3-bar-item w3-button">About Me</a>
-<a href="services.html" class="w3-bar-item w3-button">Services</a>
+<a href="services.html" class="w3-bar-item w3-button">Business</a>
 <a href="learners.html" class="w3-bar-item w3-button">Learners</a>
-<a href="pricing.html" class="w3-bar-item w3-button">Pricing</a>
+<a href="pricing.html" class="w3-bar-item w3-button">Rates</a>
 <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
 </div>
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 </div>
 
 <!-- Blank Panel -->
@@ -69,16 +88,16 @@
 <!-- Start Content -->
 <div class="content">
     <div class="intro-section">
-        <h1>Rates</h1>
-        <p class="intro-text w3-text-grey">Three (3) options are available:</p><br>
+        <h1 style="font-weight: bold;">Rates</h1>
+        <p class="intro-text" style="color:#787673;">Three (3) payment options are available:</p><br>
         <ul style="list-style-type:none; padding: 0;">
-            <li  class="w3-text-grey"><strong>Ad Hoc:</strong> Pay-per-hour for a minimum of 1 hour starting at $70 TTD.</li><br>
-            <li class="w3-text-grey"><strong>Retainer:</strong> Pre-paid fixed amount of hours per month, dependent on the task.</li><br>
-            <li class="w3-text-grey"><strong>Project:</strong> Fixed costs agreements based on specific project requirements.</li><br>
+            <li  style="color:#787673;"><strong>Ad Hoc:</strong> Pay-per-hour for a minimum of 1 hour starting at $70 TTD.</li><br>
+            <li style="color:#787673;"><strong>Retainer:</strong> Pre-paid fixed amount of hours per month, dependent on the task.</li><br>
+            <li style="color:#787673;"><strong>Project:</strong> Fixed costs agreements based on specific project requirements.</li><br>
         </ul>
-        <p class="w3-text-grey">To discuss your requirements and find out about our available packages, get in touch.</p>
+        <p style="color:#787673;"To discuss your requirements and find out about our available packages, get in touch.</p>
         <br>
-        <button class="w3-button w3-sand w3-text-grey w3-round-xlarge" onclick="window.location.href='contact.html'">Get In Touch</button>
+        <button class="w3-button w3-white w3-border w3-border-grey w3-round-xlarge" style="color:#787673;" onclick="window.location.href='contact.html'">Get In Touch</button>
     </div>
 </div>
 

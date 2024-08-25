@@ -92,18 +92,37 @@
 <body>
 
 <!-- Navigation (Sits on top) -->
-<div class="w3-top w3-bar w3-black w3-padding w3-card w3-wide">
-<a href="index.html" class="w3-bar-item w3-button">@consultwma</a>
+<div class="w3-top w3-bar w3-black w3-padding w3-card">
+<a href="index.html" class="w3-bar-item w3-button" style="color: #D3CDC6; font-weight: bold; font-size: 18px;">@consultwma</a>
 
 <!-- Right-sided navbar links. Hide them on small screens -->
-<div class="w3-right w3-hide-small">
+<div class="w3-right w3-wide" style="color: #D3CDC6;">
+<a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
+<a href="about.html" class="w3-bar-item w3-button w3-hide-small">About Me</a>
+<a href="services.html" class="w3-bar-item w3-button w3-hide-small">Business</a>
+<a href="learners.html" class="w3-bar-item w3-button w3-hide-small">Learners</a>
+<a href="pricing.html" class="w3-bar-item w3-button w3-hide-small">Rates</a>
+<a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+</div>
+<div id="demo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
 <a href="index.html" class="w3-bar-item w3-button">Home</a>
 <a href="about.html" class="w3-bar-item w3-button">About Me</a>
-<a href="services.html" class="w3-bar-item w3-button">Services</a>
+<a href="services.html" class="w3-bar-item w3-button">Business</a>
 <a href="learners.html" class="w3-bar-item w3-button">Learners</a>
-<a href="pricing.html" class="w3-bar-item w3-button">Pricing</a>
+<a href="pricing.html" class="w3-bar-item w3-button">Rates</a>
 <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
 </div>
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 </div>
 
 <!-- Start Content -->
@@ -118,7 +137,7 @@
 
 <!-- Services -->
 <div id="services" class="w3-padding-top-64">
-<h1 class="w3-center">What I Can Do</h1>
+<h1 class="w3-center" style="font-weight: bold;">What I Can Do</h1>
 <div class="w3-row">
 <!-- Blank Panel -->
 <div class="w3-panel w3-white">
@@ -130,7 +149,7 @@
 
 
 <div class="w3-col l6 m6 w3-padding-large">
-<h4>VA Services</h4>
+<h4 style="font-weight: bold;color:#787673;">VA Services</h4>
 <ul class="a w3-text-grey">
   <li>Manage your emails</li>
   <li>Coordinate appointments</li>
@@ -138,20 +157,20 @@
   <li>Data entry</li><br>
 </ul>
 
-<h4>Digital Transformation</h4>
+<h4 style="font-weight: bold;color:#787673;">Digital Transformation</h4>
 <ul class="a w3-text-grey">
   <li>Convert files to digital formats</li>
   <li>Integrate cloud technologies</li><br>
 </ul>
 
-<h4>Workspace Organization</h4>
+<h4 style="font-weight: bold;color:#787673;">Workspace Organization</h4>
 <ul class="a w3-text-grey">
   <li>Organize files and records</li>
   <li>Optimize workflows</li>
   <li>Manage calendars</li><br>
 </ul>
 
-<h4>Bookkeeping</h4>
+<h4 style="font-weight: bold;color:#787673;">Bookkeeping</h4>
 <ul class="a w3-text-grey">
   <li>Track income and expenses</li>
   <li>Reconcile accounts</li>
@@ -163,19 +182,19 @@
 </div>
 
 
-<h4>Business registrations, company incorporations, business bank accounts, and personal business services are also available.</h4>
+<h4 style="font-style: italic; color:#D5B7A2; font-weight:bold">Business registrations, company incorporations, business bank accounts, and personal business services are also available.</h4>
 
 </div>
 
 <div class="w3-col l6 m6 w3-padding-large">
-<img src="img_greeting.jpg" class="w3-round w3-image " alt="Service" style="width:100%">
+<img src="profile.png" class="w3-round w3-image " alt="Service" style="width:100%">
 </div>
 
 </div>
 
 
 <div class="w3-container w3-text-grey">
-<button class="w3-button w3-sand w3-text-grey w3-round-xlarge" onclick="window.location.href='contact.html'">Let's Talk About What You Need</button>
+<br><button class="w3-button w3-round-xlarge" style="display: block; margin: 0 auto; color: #787673; background-color: #F2D3BD;" onclick="window.location.href='contact.html'">Let's Talk About What You Need</button></br>
 </div>
 
 </div>
